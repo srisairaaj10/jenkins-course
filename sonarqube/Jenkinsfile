@@ -1,4 +1,10 @@
 node {
+
+   environment {
+      PATH = "/usr/local/bin:$PATH"
+   }
+
+    
     def myGradleContainer = docker.image('gradle:jdk8-alpine')
     myGradleContainer.pull()
 
