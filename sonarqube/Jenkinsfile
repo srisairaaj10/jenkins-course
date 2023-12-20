@@ -1,9 +1,4 @@
 node {
-
-     stage('Initialize'){
-        def dockerHome = tool 'docker'
-        env.PATH = "${dockerHome}/bin:${env.PATH}"
-    }
     def myGradleContainer = docker.image('gradle:jdk8-alpine')
     myGradleContainer.pull()
 
